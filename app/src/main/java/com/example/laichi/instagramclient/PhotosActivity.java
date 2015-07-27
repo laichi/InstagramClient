@@ -52,6 +52,7 @@ public class PhotosActivity extends ActionBarActivity {
                         photo.username = photoJson.getJSONObject("user").getString("username");
                         photo.caption = photoJson.getJSONObject("caption").getString("text");
                         photo.imageUrl= photoJson.getJSONObject("images").getJSONObject("standard_resolution").getString("url");
+                        photo.profileUrl = photoJson.getJSONObject("user").getString("profile_picture");
                         photo.imageHeight = photoJson.getJSONObject("images").getJSONObject("standard_resolution").getInt("height");
                         photo.likesCount = photoJson.getJSONObject("likes").getInt("count");
 
